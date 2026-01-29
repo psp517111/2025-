@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 數位行銷暨營運全方位成就作品集</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +15,7 @@
         .data-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
         .image-placeholder { background: #f8fafc; border: 2px dashed #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.9rem; border-radius: 1.5rem; transition: background 0.3s; cursor: pointer; position: relative; overflow: hidden; }
         .image-placeholder:hover { background: #f1f5f9; border-color: #94a3b8; color: #64748b; }
-        .image-placeholder::after { content: '點擊更換圖片'; position: absolute; bottom: 10px; font-size: 0.7rem; opacity: 0; transition: opacity 0.3s; }
+        .image-placeholder::after { content: '點擊輸入圖片網址'; position: absolute; bottom: 10px; font-size: 0.7rem; opacity: 0; transition: opacity 0.3s; background: rgba(255,255,255,0.8); padding: 2px 6px; border-radius: 4px; }
         .image-placeholder:hover::after { opacity: 1; }
         .sticky-nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid #f1f5f9; }
         .nav-link { transition: all 0.3s; position: relative; cursor: pointer; }
@@ -23,6 +23,10 @@
         .nav-link:hover::after { width: 100%; }
         .sidebar-marker { border-left: 4px solid #2563eb; padding-left: 20px; }
         
+        /* Editing Highlight */
+        [contenteditable="true"]:hover { outline: 1px dashed #cbd5e1; cursor: text; }
+        [contenteditable="true"]:focus { outline: 2px solid #2563eb; background: rgba(255,255,255,0.1); }
+
         /* Animation Classes */
         .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
@@ -34,9 +38,10 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="sticky-nav px-8 py-5 flex justify-center items-center shadow-sm">
-        <!-- Removed ROGER LUO -->
-        <div class="flex space-x-10 text-sm font-bold uppercase tracking-widest text-slate-500">
+    <nav class="sticky-nav px-8 py-5 flex justify-between items-center shadow-sm">
+        <!-- 移除 ROGER LUO -->
+        <div class="font-black text-2xl tracking-tighter uppercase text-slate-900" contenteditable="true">PORTFOLIO</div>
+        <div class="hidden lg:flex space-x-10 text-sm font-bold uppercase tracking-widest text-slate-500">
             <a href="#overview" class="nav-link hover:text-blue-600 transition">成就總覽</a>
             <a href="#design" class="nav-link hover:text-blue-600 transition">設計美學</a>
             <a href="#website" class="nav-link hover:text-blue-600 transition">官網營運</a>
@@ -45,15 +50,16 @@
             <a href="#special" class="nav-link hover:text-blue-600 transition">標竿專案</a>
             <a href="#skills" class="nav-link hover:text-blue-600 transition">核心能力</a>
         </div>
-        <!-- Removed Invite Button -->
+        <!-- 移除 邀請面試 按鈕 -->
+        <div></div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero-bg min-h-screen flex items-center justify-center text-center text-white relative">
         <div class="max-w-5xl mx-auto px-6 fade-in-up">
-            <h2 class="text-blue-400 font-bold tracking-[0.5em] mb-6 uppercase text-sm md:text-base">2025 Executive Performance Portfolio</h2>
-            <h1 class="text-5xl md:text-8xl font-black mb-10 leading-[1.1]">一人建構<br><span class="text-yellow-400">$6,237,283</span> 產值</h1>
-            <p class="text-xl md:text-2xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed mb-12">
+            <h2 class="text-blue-400 font-bold tracking-[0.5em] mb-6 uppercase text-sm md:text-base" contenteditable="true">2025 Executive Performance Portfolio</h2>
+            <h1 class="text-5xl md:text-8xl font-black mb-10 leading-[1.1]" contenteditable="true">一人建構<br><span class="text-yellow-400">$6,237,283</span> 產值</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed mb-12" contenteditable="true">
                 2025 年，獨立完成從品牌識別重塑、全社群圖文設計、官網 SEO 架構佈局到政府標案執行。致力於將設計產能轉化為組織實質的財務增長與品牌影響力。
             </p>
             <div class="flex flex-wrap justify-center gap-6">
@@ -71,30 +77,30 @@
     <section id="overview" class="section-padding">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24 fade-in-up">
-                <h2 class="text-5xl font-black mb-6">2025 年度核心成效大數據</h2>
+                <h2 class="text-5xl font-black mb-6" contenteditable="true">2025 年度核心成效大數據</h2>
                 <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="p-10 data-card text-center fade-in-up delay-100">
-                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">年度總收益貢獻</p>
-                    <div class="text-4xl font-black text-slate-800 mb-2">$6,237,283</div>
-                    <p class="text-xs text-blue-600 font-bold">涵蓋標案、合作與變現</p>
+                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest" contenteditable="true">年度總收益貢獻</p>
+                    <div class="text-4xl font-black text-slate-800 mb-2" contenteditable="true">$6,237,283</div>
+                    <p class="text-xs text-blue-600 font-bold" contenteditable="true">涵蓋標案、合作與變現</p>
                 </div>
                 <div class="p-10 data-card text-center fade-in-up delay-200">
-                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">廣告投報率 ROAS</p>
-                    <div class="text-4xl font-black text-slate-800 mb-2">35.1 倍</div>
-                    <p class="text-xs text-pink-600 font-bold">精準廣告與高點擊素材</p>
+                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest" contenteditable="true">廣告投報率 ROAS</p>
+                    <div class="text-4xl font-black text-slate-800 mb-2" contenteditable="true">35.1 倍</div>
+                    <p class="text-xs text-pink-600 font-bold" contenteditable="true">精準廣告與高點擊素材</p>
                 </div>
                 <div class="p-10 data-card text-center fade-in-up delay-300">
-                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">LINE 好友總數</p>
-                    <div class="text-4xl font-black text-slate-800 mb-2">3.6 萬人</div>
-                    <p class="text-xs text-green-600 font-bold">年度淨增 2 萬 (+127%)</p>
+                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest" contenteditable="true">LINE 好友總數</p>
+                    <div class="text-4xl font-black text-slate-800 mb-2" contenteditable="true">3.6 萬人</div>
+                    <p class="text-xs text-green-600 font-bold" contenteditable="true">年度淨增 2 萬 (+127%)</p>
                 </div>
                 <div class="p-10 data-card text-center fade-in-up delay-300">
-                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">Threads 自然流量</p>
-                    <div class="text-4xl font-black text-slate-800 mb-2">126 萬+</div>
-                    <p class="text-xs text-slate-500 font-bold">零預算創造百萬級曝光</p>
+                    <p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest" contenteditable="true">Threads 自然流量</p>
+                    <div class="text-4xl font-black text-slate-800 mb-2" contenteditable="true">126 萬+</div>
+                    <p class="text-xs text-slate-500 font-bold" contenteditable="true">零預算創造百萬級曝光</p>
                 </div>
             </div>
         </div>
@@ -106,35 +112,35 @@
             <div class="flex flex-col lg:flex-row gap-20 items-start">
                 <div class="lg:w-1/2 sticky top-40">
                     <div class="sidebar-marker">
-                        <h2 class="text-5xl font-black mb-8 leading-tight">品牌識別與<br>全通路視覺操刀</h2>
-                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        <h2 class="text-5xl font-black mb-8 leading-tight" contenteditable="true">品牌識別與<br>全通路視覺操刀</h2>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed" contenteditable="true">
                             身為組織唯一的視覺與行銷操盤手，獨立主導並設計了聽見 AED 的全品牌識別系統 (VI)。從色彩定義、標準字規範到每一張社群圖卡、懶人包與活動海報，均一手包辦。
                         </p>
                         <div class="space-y-6 text-sm">
                             <div class="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
                                 <i class="fas fa-palette text-blue-600 text-xl"></i>
-                                <p class="text-slate-700">視覺識別 (VI) 建置：制定品牌風格指南，大幅提升機構的專業公信力與信賴感。</p>
+                                <p class="text-slate-700" contenteditable="true">視覺識別 (VI) 建置：制定品牌風格指南，大幅提升機構的專業公信力與信賴感。</p>
                             </div>
                             <div class="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
                                 <i class="fas fa-magic text-pink-600 text-xl"></i>
-                                <p class="text-slate-700">社群美學：親自設計超過 100 組社群圖文素材，帶動 Facebook 連結點擊成長 813.3%。</p>
+                                <p class="text-slate-700" contenteditable="true">社群美學：親自設計超過 100 組社群圖文素材，帶動 Facebook 連結點擊成長 813.3%。</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-1 gap-6">
-                    <div class="image-placeholder h-96 group relative">
-                        <span class="z-10">[品牌視覺規範手冊]</span>
+                    <div class="image-placeholder h-96 group relative" onclick="editImage(this)">
+                        <span class="z-10" contenteditable="true">[品牌視覺規範手冊]</span>
                         <div class="absolute inset-0 bg-slate-100 opacity-0 group-hover:opacity-10 transition duration-300"></div>
                     </div>
-                    <div class="image-placeholder h-96 group relative">
-                        <span class="z-10">[課程推廣懶人包系列]</span>
+                    <div class="image-placeholder h-96 group relative" onclick="editImage(this)">
+                        <span class="z-10" contenteditable="true">[課程推廣懶人包系列]</span>
                     </div>
-                    <div class="image-placeholder h-96 group relative">
-                        <span class="z-10">[公益晚會、救護週主視覺]</span>
+                    <div class="image-placeholder h-96 group relative" onclick="editImage(this)">
+                        <span class="z-10" contenteditable="true">[公益晚會、救護週主視覺]</span>
                     </div>
-                    <div class="image-placeholder h-96 group relative">
-                        <span class="z-10">[LINE 圖文選單介面設計]</span>
+                    <div class="image-placeholder h-96 group relative" onclick="editImage(this)">
+                        <span class="z-10" contenteditable="true">[LINE 圖文選單介面設計]</span>
                     </div>
                 </div>
             </div>
@@ -147,35 +153,35 @@
             <div class="flex flex-col lg:flex-row-reverse gap-20 items-center">
                 <div class="lg:w-5/12">
                     <div class="sidebar-marker" style="border-left-color: #059669;">
-                        <h2 class="text-5xl font-black mb-8">一人管理官網<br>SEO 內容戰略</h2>
-                        <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                        <h2 class="text-5xl font-black mb-8" contenteditable="true">一人管理官網<br>SEO 內容戰略</h2>
+                        <p class="text-lg text-slate-600 mb-10 leading-relaxed" contenteditable="true">
                             獨自負責官網的所有維運與內容產出。到職後即刻補齊數據代碼（GA4、GTM），並透過高質量的 SEO 文章撰寫與頁面優化，將官網從單純的資訊展示頁轉型為年流量 2.8 萬人的獲客入口。
                         </p>
                         <div class="space-y-4">
-                            <h4 class="font-black text-slate-900 mb-4">SEO 內容產出成果：</h4>
+                            <h4 class="font-black text-slate-900 mb-4" contenteditable="true">SEO 內容產出成果：</h4>
                             <div class="flex justify-between items-center border-b pb-3 hover:bg-slate-50 px-2 transition">
-                                <span class="text-sm">LINE 使用教學文章</span>
-                                <span class="data-badge">4,940 瀏覽</span>
+                                <span class="text-sm" contenteditable="true">LINE 使用教學文章</span>
+                                <span class="data-badge" contenteditable="true">4,940 瀏覽</span>
                             </div>
                             <div class="flex justify-between items-center border-b pb-3 hover:bg-slate-50 px-2 transition">
-                                <span class="text-sm">急救先鋒 vs 聽見 AED 比較文</span>
-                                <span class="data-badge">4,167 瀏覽</span>
+                                <span class="text-sm" contenteditable="true">急救先鋒 vs 聽見 AED 比較文</span>
+                                <span class="data-badge" contenteditable="true">4,167 瀏覽</span>
                             </div>
                             <div class="flex justify-between items-center border-b pb-3 hover:bg-slate-50 px-2 transition">
-                                <span class="text-sm">認識協會急救課程</span>
-                                <span class="data-badge">3,659 瀏覽</span>
+                                <span class="text-sm" contenteditable="true">認識協會急救課程</span>
+                                <span class="data-badge" contenteditable="true">3,659 瀏覽</span>
                             </div>
                         </div>
                         <div class="mt-10 bg-green-50 p-8 rounded-3xl border border-green-100">
-                            <p class="text-green-800 font-bold mb-2 uppercase text-xs tracking-widest">SEO 成效數據</p>
-                            <p class="text-3xl font-black text-green-900">+377.0% 自然搜尋流量成長</p>
+                            <p class="text-green-800 font-bold mb-2 uppercase text-xs tracking-widest" contenteditable="true">SEO 成效數據</p>
+                            <p class="text-3xl font-black text-green-900" contenteditable="true">+377.0% 自然搜尋流量成長</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-7/12 grid grid-cols-2 gap-4">
-                    <div class="image-placeholder aspect-square">[官網大改版前後對比截圖]</div>
-                    <div class="image-placeholder aspect-square">[GA4 流量成長陡峭曲線圖]</div>
-                    <div class="image-placeholder aspect-video col-span-2 mt-4">[獨自撰寫之 SEO 文章列表與排名展示]</div>
+                    <div class="image-placeholder aspect-square" onclick="editImage(this)">[官網大改版前後對比截圖]</div>
+                    <div class="image-placeholder aspect-square" onclick="editImage(this)">[GA4 流量成長陡峭曲線圖]</div>
+                    <div class="image-placeholder aspect-video col-span-2 mt-4" onclick="editImage(this)">[獨自撰寫之 SEO 文章列表與排名展示]</div>
                 </div>
             </div>
         </div>
@@ -185,7 +191,7 @@
     <section id="social" class="section-padding bg-slate-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4">全通路社群生態系成長</h2>
+                <h2 class="text-4xl font-black mb-4" contenteditable="true">全通路社群生態系成長</h2>
                 <div class="w-20 h-1 bg-purple-600 mx-auto rounded-full"></div>
             </div>
             
@@ -193,26 +199,26 @@
                 <!-- Threads -->
                 <div class="data-card p-8 flex flex-col items-center text-center">
                     <i class="fab fa-threads text-4xl mb-4 text-black"></i>
-                    <h3 class="font-bold text-xl mb-2">Threads 流量黑馬</h3>
-                    <p class="text-slate-500 text-sm mb-6">掌握演算法紅利，零成本創造爆款貼文。</p>
-                    <div class="text-3xl font-black text-slate-800">126 萬+</div>
-                    <p class="text-xs text-slate-400 mt-2">年度自然瀏覽</p>
+                    <h3 class="font-bold text-xl mb-2" contenteditable="true">Threads 流量黑馬</h3>
+                    <p class="text-slate-500 text-sm mb-6" contenteditable="true">掌握演算法紅利，零成本創造爆款貼文。</p>
+                    <div class="text-3xl font-black text-slate-800" contenteditable="true">126 萬+</div>
+                    <p class="text-xs text-slate-400 mt-2" contenteditable="true">年度自然瀏覽</p>
                 </div>
                 <!-- Facebook -->
                 <div class="data-card p-8 flex flex-col items-center text-center">
                     <i class="fab fa-facebook text-4xl mb-4 text-blue-600"></i>
-                    <h3 class="font-bold text-xl mb-2">Facebook 轉換引擎</h3>
-                    <p class="text-slate-500 text-sm mb-6">高點擊素材策略，導流至官網與報名頁。</p>
-                    <div class="text-3xl font-black text-slate-800">+813.3%</div>
-                    <p class="text-xs text-slate-400 mt-2">連結點擊成長率</p>
+                    <h3 class="font-bold text-xl mb-2" contenteditable="true">Facebook 轉換引擎</h3>
+                    <p class="text-slate-500 text-sm mb-6" contenteditable="true">高點擊素材策略，導流至官網與報名頁。</p>
+                    <div class="text-3xl font-black text-slate-800" contenteditable="true">+813.3%</div>
+                    <p class="text-xs text-slate-400 mt-2" contenteditable="true">連結點擊成長率</p>
                 </div>
                 <!-- LINE -->
                 <div class="data-card p-8 flex flex-col items-center text-center">
                     <i class="fab fa-line text-4xl mb-4 text-green-500"></i>
-                    <h3 class="font-bold text-xl mb-2">LINE 私域資產</h3>
-                    <p class="text-slate-500 text-sm mb-6">自動化圖文選單與回覆，降低人工客服。</p>
-                    <div class="text-3xl font-black text-slate-800">+127.1%</div>
-                    <p class="text-xs text-slate-400 mt-2">好友淨增成長率</p>
+                    <h3 class="font-bold text-xl mb-2" contenteditable="true">LINE 私域資產</h3>
+                    <p class="text-slate-500 text-sm mb-6" contenteditable="true">自動化圖文選單與回覆，降低人工客服。</p>
+                    <div class="text-3xl font-black text-slate-800" contenteditable="true">+127.1%</div>
+                    <p class="text-xs text-slate-400 mt-2" contenteditable="true">好友淨增成長率</p>
                 </div>
             </div>
         </div>
@@ -222,33 +228,33 @@
     <section id="revenue" class="section-padding bg-slate-900 text-white overflow-hidden relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-black mb-6">視覺驅動的營收變現</h2>
-                <p class="text-slate-400 text-lg">將高質感的視覺設計轉化為實質的報名表單與捐款金額。</p>
+                <h2 class="text-5xl font-black mb-6" contenteditable="true">視覺驅動的營收變現</h2>
+                <p class="text-slate-400 text-lg" contenteditable="true">將高質感的視覺設計轉化為實質的報名表單與捐款金額。</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div class="p-12 rounded-[3rem] bg-slate-800 border border-slate-700">
-                    <h3 class="text-3xl font-bold mb-6 flex items-center gap-4">
+                    <h3 class="text-3xl font-bold mb-6 flex items-center gap-4" contenteditable="true">
                         <i class="fas fa-ad text-pink-500"></i> 極效廣告操作
                     </h3>
-                    <p class="text-slate-400 mb-10 text-lg">
+                    <p class="text-slate-400 mb-10 text-lg" contenteditable="true">
                         透過親自設計的高對比素材與情境式文案，全年度僅投入 3,336 元廣告費，卻直接創造了 117,240 元營收。平均點擊成本僅 0.99 元，節省約 90% 的行銷預算。
                     </p>
                     <div class="flex items-center gap-4">
-                        <div class="text-4xl font-black text-yellow-500">35.1</div>
-                        <div class="text-xs uppercase tracking-widest font-bold">年度廣告投報率<br>ROAS (課程端)</div>
+                        <div class="text-4xl font-black text-yellow-500" contenteditable="true">35.1</div>
+                        <div class="text-xs uppercase tracking-widest font-bold" contenteditable="true">年度廣告投報率<br>ROAS (課程端)</div>
                     </div>
                 </div>
                 <div class="p-12 rounded-[3rem] bg-blue-600">
-                    <h3 class="text-3xl font-bold mb-6 flex items-center gap-4">
+                    <h3 class="text-3xl font-bold mb-6 flex items-center gap-4" contenteditable="true">
                         <i class="fas fa-store text-white"></i> 商業模式產品化
                     </h3>
-                    <p class="text-blue-100 mb-10 text-lg">
+                    <p class="text-blue-100 mb-10 text-lg" contenteditable="true">
                         從零建立了課程收費 SOP 與 Accupass 售票系統。透過視覺化的銷售頁面設計，年度課程營收從 0 元成長至 15.8 萬，並 7 度獲選平台主辦竄升榜。
                     </p>
                     <div class="flex items-center gap-4">
-                        <div class="text-4xl font-black text-white">15.8 萬</div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-blue-200">從 0 開始開發<br>全新課程現金流</div>
+                        <div class="text-4xl font-black text-white" contenteditable="true">15.8 萬</div>
+                        <div class="text-xs uppercase tracking-widest font-bold text-blue-200" contenteditable="true">從 0 開始開發<br>全新課程現金流</div>
                     </div>
                 </div>
             </div>
@@ -260,31 +266,31 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row gap-20 items-center">
                 <div class="lg:w-1/2">
-                    <div class="image-placeholder aspect-video rounded-3xl shadow-2xl">[台中市政府救護週活動現場熱鬧紀實照片]</div>
+                    <div class="image-placeholder aspect-video rounded-3xl shadow-2xl" onclick="editImage(this)">[台中市政府救護週活動現場熱鬧紀實照片]</div>
                     <div class="mt-8 grid grid-cols-2 gap-4">
-                        <div class="image-placeholder h-32">[與迪卡儂合作之專櫃視覺]</div>
-                        <div class="image-placeholder h-32">[公視專題採訪新聞畫面]</div>
+                        <div class="image-placeholder h-32" onclick="editImage(this)">[與迪卡儂合作之專櫃視覺]</div>
+                        <div class="image-placeholder h-32" onclick="editImage(this)">[公視專題採訪新聞畫面]</div>
                     </div>
                 </div>
                 <div class="lg:w-1/2 text-left">
                     <div class="sidebar-marker" style="border-left-color: #ef4444;">
-                        <h2 class="text-5xl font-black mb-8">台中市政府救護週<br>全案推廣執行</h2>
-                        <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                        <h2 class="text-5xl font-black mb-8" contenteditable="true">台中市政府救護週<br>全案推廣執行</h2>
+                        <p class="text-lg text-slate-600 mb-10 leading-relaxed" contenteditable="true">
                             9 月份，主導執行台中市政府救護週推廣專案。在人力有限的條件下，統籌了為期 4 天的線下快閃 CPR 活動。獨立完成了場地洽談（包含與迪卡儂、各大車站跨界合作）、現場人員調度及活動主視覺設計。
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <span class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0"><i class="fas fa-bullhorn"></i></span>
                                 <div>
-                                    <h5 class="font-bold">全案統籌與執行</h5>
-                                    <p class="text-xs text-slate-500 mt-1">從活動企劃、物資調度到現場執行流程，皆由一手掌控，並同步執行公視專題採訪接洽。</p>
+                                    <h5 class="font-bold" contenteditable="true">全案統籌與執行</h5>
+                                    <p class="text-xs text-slate-500 mt-1" contenteditable="true">從活動企劃、物資調度到現場執行流程，皆由一手掌控，並同步執行公視專題採訪接洽。</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
                                 <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="fas fa-file-contract"></i></span>
                                 <div>
-                                    <h5 class="font-bold">獲選 7-11 全國募款平台</h5>
-                                    <p class="text-xs text-slate-500 mt-1">獨立撰寫高品質提案，從全國眾多 NPO 中脫穎而出，拿下 2026 年度最具指標性的全國通路資源。</p>
+                                    <h5 class="font-bold" contenteditable="true">獲選 7-11 全國募款平台</h5>
+                                    <p class="text-xs text-slate-500 mt-1" contenteditable="true">獨立撰寫高品質提案，從全國眾多 NPO 中脫穎而出，拿下 2026 年度最具指標性的全國通路資源。</p>
                                 </div>
                             </div>
                         </div>
@@ -297,23 +303,23 @@
     <!-- Skills & Tools -->
     <section id="skills" class="section-padding bg-slate-50">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-black mb-20 uppercase tracking-tighter">技術與核心能力 <span class="text-blue-600">Capability</span></h2>
+            <h2 class="text-4xl font-black mb-20 uppercase tracking-tighter" contenteditable="true">技術與核心能力 <span class="text-blue-600">Capability</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <div class="p-10 data-card text-left">
-                    <h4 class="text-xl font-black mb-6 flex items-center gap-3"><i class="fas fa-brush text-blue-600"></i> 視覺美學力</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">
+                    <h4 class="text-xl font-black mb-6 flex items-center gap-3" contenteditable="true"><i class="fas fa-brush text-blue-600"></i> 視覺美學力</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed" contenteditable="true">
                         全品牌視覺規範制定、所有社群視覺自產、高點擊廣告素材設計。擅長用視覺語言建立品牌的高級感與專業度。
                     </p>
                 </div>
                 <div class="p-10 data-card text-left">
-                    <h4 class="text-xl font-black mb-6 flex items-center gap-3"><i class="fas fa-code text-green-600"></i> 數位營運力</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">
+                    <h4 class="text-xl font-black mb-6 flex items-center gap-3" contenteditable="true"><i class="fas fa-code text-green-600"></i> 數位營運力</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed" contenteditable="true">
                         一人管理官網、SEO 文章撰寫、GA4/GTM 技術部署。能獨立完成從前端展示到後端追蹤的數位閉環。
                     </p>
                 </div>
                 <div class="p-10 data-card text-left">
-                    <h4 class="text-xl font-black mb-6 flex items-center gap-3"><i class="fas fa-users-cog text-pink-600"></i> 組織管理力</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">
+                    <h4 class="text-xl font-black mb-6 flex items-center gap-3" contenteditable="true"><i class="fas fa-users-cog text-pink-600"></i> 組織管理力</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed" contenteditable="true">
                         年度製作核發 1,423 張證照 SOP 建立、政府專案统籌。在維持行銷產出的同時，確保後勤系統穩定運作。
                     </p>
                 </div>
@@ -323,8 +329,8 @@
 
     <!-- Footer -->
     <footer class="bg-white py-24 px-6 text-center border-t border-slate-100">
-        <h2 class="text-5xl font-black mb-10">想要一位能為公司<br>建立增長系統的戰力嗎？</h2>
-        <p class="text-xl text-slate-400 mb-16">我不只是行銷，我是在混亂中建立秩序與收益的營運者。</p>
+        <h2 class="text-5xl font-black mb-10" contenteditable="true">想要一位能為公司<br>建立增長系統的戰力嗎？</h2>
+        <p class="text-xl text-slate-400 mb-16" contenteditable="true">我不只是行銷，我是在混亂中建立秩序與收益的營運者。</p>
         <p class="mt-32 text-xs text-slate-300 tracking-[0.3em] uppercase">© 2026 數位行銷與營運成效全實錄</p>
     </footer>
 
@@ -382,11 +388,22 @@
             }
         };
     </script>
+    <script>
+        // Image Editing Logic
+        function editImage(element) {
+            const url = prompt('請輸入圖片網址 (URL):', '');
+            if (url) {
+                element.style.backgroundImage = `url('${url}')`;
+                element.style.backgroundSize = 'cover';
+                element.style.backgroundPosition = 'center';
+                element.innerText = ''; // Clear text
+            }
+        }
+    </script>
 
     <style>
         .loader { border: 3px solid #f3f3f3; border-top: 3px solid #2563eb; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </body>
-
 </html>
